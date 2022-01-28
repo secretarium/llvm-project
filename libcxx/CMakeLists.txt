@@ -134,7 +134,7 @@ set(LIBCXX_TEST_PARAMS "" CACHE STRING
     "A list of parameters to run the Lit test suite with.")
 
 # Benchmark options -----------------------------------------------------------
-option(LIBCXX_INCLUDE_BENCHMARKS "Build the libc++ benchmarks and their dependencies" ON)
+option(LIBCXX_INCLUDE_BENCHMARKS "Build the libc++ benchmarks and their dependencies" OFF)
 
 set(LIBCXX_BENCHMARK_TEST_ARGS_DEFAULT --benchmark_min_time=0.01)
 set(LIBCXX_BENCHMARK_TEST_ARGS "${LIBCXX_BENCHMARK_TEST_ARGS_DEFAULT}" CACHE STRING
