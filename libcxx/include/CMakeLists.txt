@@ -408,10 +408,10 @@ add_dependencies(cxx-headers generate-cxx-headers ${LIBCXX_CXX_ABI_HEADER_TARGET
 # TODO: Use target_include_directories once we figure out why that breaks the runtimes build
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC" OR "${CMAKE_CXX_SIMULATE_ID}" STREQUAL "MSVC")
   target_compile_options(cxx-headers INTERFACE /I${LIBCXX_GENERATED_INCLUDE_DIR}
-                                     INTERFACE /I${LIBCXX_GENERATED_INCLUDE_TARGET_DIR})
+                                     INTERFACE /I${LIBCXX_GENERATED_INCLUDE_DIR_ROOT})
 else()
   target_compile_options(cxx-headers INTERFACE -I${LIBCXX_GENERATED_INCLUDE_DIR}
-                                     INTERFACE -I${LIBCXX_GENERATED_INCLUDE_TARGET_DIR})
+                                     INTERFACE -I${LIBCXX_GENERATED_INCLUDE_DIR_ROOT})
 endif()
 
 if (LIBCXX_INSTALL_HEADERS)
